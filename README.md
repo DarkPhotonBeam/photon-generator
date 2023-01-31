@@ -1,5 +1,7 @@
 # photon-generator
 
+[Repository](https://github.com/DarkPhotonBeam/photon-generator)
+
 ## Installation
 
 Either execute directly using
@@ -22,25 +24,27 @@ Afterwards executable is found at ``build/src/index.js``.
 ## Usage
 ### Example Folder structure
 
-- index.html
-- meta.json
-- blog/
-  - first-post/
-    - first-post.md
-    - meta.json
-  - second-post/
-    - foo.html
-  - whatever/
-    - idontcare.md
-- about/
-  - aboutme.html
+- .
+- pages/
+  - index.html
   - meta.json
-  - style.css
-- assets/
-  - portrait.jpg
+  - blog/
+    - first-post/
+      - first-post.md
+      - meta.json
+    - second-post/
+      - foo.html
+    - whatever/
+      - idontcare.md
+  - about/
+    - aboutme.html
+    - meta.json
+    - style.css
+  - assets/
+    - portrait.jpg
 
 Each folder represents a route. A folder can have at max one .html or .md file which describes the body of that route.
-meta.json is for metadata. All media like pictures should be stored in the assets/ folder. 
+meta.json is for metadata. All media like pictures should be stored in the assets/ folder. pages/ is your root folder, i.e. "index.html". pages/ cannot be renamed, photon-generator searches for a pages/ directory on execution.
 
 ### Example meta.json
 
