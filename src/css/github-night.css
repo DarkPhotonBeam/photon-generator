@@ -234,9 +234,22 @@ nav ul li:last-child {
   margin-right: 0;
 }
 
+ul, pre {
+  color: var(--text-color);
+}
+
+nav {
+  padding: .25rem .25rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+}
+
 main {
   max-width: 80ch;
   width: 100%;
+  padding: 0 .25rem;
 }
 
 /*.md-end-block.md-heading.md-focus {
