@@ -39,6 +39,15 @@ export class Page {
     return str;
   }
 
+  compare(page: Page): boolean {
+    if (page.subpages.length !== this.subpages.length || page.title !== this.title || page.body !== this.body || page.path !== this.path || page.outputDir !== this.outputDir || page.name !== this.name) return false;
+    for (let i = 0; i < page.subpages.length; i++) {
+      let res = page.subpages[i].compare(this.subpages[i]);
+      if (!res) return false;
+    }
+    return true;
+  }
+
   async build() {
     await writeFile(
       resolve(process.cwd(), this.outputDir, this.path, "index.html"),
@@ -113,6 +122,12 @@ export class PageRoot extends Page {
         `Failed to delete old output folder with error: ${e.message}`
       );
     }
+    return false;
+  }
+
+  compareRoot(root: PageRoot): boolean {
+
+
     return false;
   }
 

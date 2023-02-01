@@ -2,6 +2,24 @@
 
 [Repository](https://github.com/DarkPhotonBeam/photon-generator)
 
+## Newest Features
+
+### Auto-Regen
+
+Let photon-generator automatically regenerate your build on file changes! Just run the command with the --watch flag and photon-generator will poll for changes and regenerate when a change has been made!
+```shell
+photon-generator --watch
+```
+or
+```shell
+photon-generator -w
+```
+
+The polling interval in ms can be changed using --pollingRate or -pr (default: 1000ms)
+```shell
+photon-generator -w -pr 100
+```
+
 ## Installation
 
 Either execute directly using
