@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/dan/.nvm/versions/node/v16.18.0/bin/node /Users/dan/.nvm/versions/node/v16.18.0/bin/yarn publish
+  /Users/dan/.nvm/versions/node/v16.18.0/bin/node /Users/dan/.cache/node/corepack/yarn/1.22.19/bin/yarn.js publish
 
 PATH: 
   /Users/dan/.nvm/versions/node/v16.18.0/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/dan/WebstormProjects/blog-generator/node_modules/.bin
@@ -15,7 +15,7 @@ Platform:
 
 Trace: 
   Error: canceled
-      at Interface.<anonymous> (/Users/dan/.nvm/versions/node/v16.18.0/lib/node_modules/yarn/lib/cli.js:137150:13)
+      at Interface.<anonymous> (/Users/dan/.cache/node/corepack/yarn/1.22.19/lib/cli.js:137150:13)
       at Interface.emit (node:events:513:28)
       at Interface._ttyWrite (node:readline:1085:16)
       at ReadStream.onkeypress (node:readline:291:10)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "photon-generator",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "",
     "main": "build/src/index.js",
     "types": "build/src/index.d.ts",
@@ -58,10 +58,10 @@ npm manifest:
       "typescript": "~4.7.0"
     },
     "dependencies": {
+      "chalk": "^4",
       "commander": "^10.0.0",
       "figlet": "^1.5.2",
-      "showdown": "^2.1.0",
-      "chalk": "^4"
+      "showdown": "^2.1.0"
     }
   }
 
