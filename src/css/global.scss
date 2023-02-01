@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap");
+
+/*
+Theme Name: GitHub Night
+Theme URI: https://github.com/kinoute/typora-github-night-theme
+Authors: Yann Defretin, GitHub Team
+Author URI: https://github.com/kinoute
+Description: Typora themes that reproduces GitHub Dark Color Schemes.
+Version: 0.6.2
+Tags: dark, github, typora
+*/
+
+/* nunito-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-regular.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-italic - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-italic.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-800 - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-800.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/nunito-sans-v6-latin-ext_latin-800.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* nunito-sans-800italic - latin-ext_latin */
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.eot");
+  /* IE9 Compat Modes */
+  src: local(""),
+    url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/nunito-sans-v6-latin-ext_latin-800italic.svg#NunitoSans")
+      format("svg");
+  /* Legacy iOS */
+}
+
+/* Use a special font for code blocks just like GitHub */
+@font-face {
+  font-family: "SFMono-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SF Mono Regular"),
+    url("./fonts/SFMonoSemibold.woff") format("woff");
+}
+
+:root {
+  --bg-color: #0D1116;
+  --text-color: #c9d1d9;
+  --link-color: #58a6ff;
+  --subtitle-color: #8B949E;
+  --heading-font: "Jost", sans-serif;
+  --text-font: "Nunito", sans-serif;
+  --root-font-size: 20px;
+  --code-font: "Roboto Mono", "Fira Code", "SFMono-Regular", monospace;
+  --box-color: #161B22;
+}
+
+html, body {
+
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--text-font);
+  font-size: var(--root-font-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main {
+  max-width: 80ch;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+ul, p, pre {
+  margin-bottom: 2rem;
+}
+
+pre {
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+  background-color: var(--box-color);
+}
+
+pre, code {
+  font-family: var(--code-font);
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}

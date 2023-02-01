@@ -3,9 +3,10 @@ import {Page, PageRoot} from "../classes/page";
 import {join, resolve} from "path";
 import {opendir, readFile} from "fs/promises";
 // @ts-ignore
-import * as showdown from "showdown";
+//import * as showdown from "showdown";
 import {existsSync} from "fs";
 import chalk from "chalk";
+import {marked} from "marked";
 
 export async function generateStructure(
   outputDir: string = "out",
@@ -14,6 +15,7 @@ export async function generateStructure(
   const root = new PageRoot(outputDir);
   try {
     //console.log(`Start scan at ${resolve(path)}/ ...`);
+    //if (existsSync(resolve(path,"")))
     if (!existsSync(resolve(path, "pages"))) {
       console.error(chalk.yellow(`No "pages" directory found.`));
       return null;
@@ -63,8 +65,9 @@ async function addPage(root: PageRoot, parent: Page | null, path: string = "") {
             dirent.name.endsWith(".htm")
           ) {
             if (dirent.name.endsWith(".md")) {
-              const converter = new showdown.Converter();
-              page.body = converter.makeHtml(contents);
+              //const converter = new showdown.Converter();
+              //page.body = converter.makeHtml(contents);
+              page.body = marked.parse(contents);
             } else {
               page.body = contents;
             }

@@ -63,6 +63,8 @@ export class Page {
 }
 
 export class PageRoot extends Page {
+  globalCss: string = "";
+
   async buildRoot() {
     try {
       if (
@@ -126,9 +128,9 @@ export class PageRoot extends Page {
   }
 
   compareRoot(root: PageRoot): boolean {
+    if (root.globalCss !== this.globalCss) return false;
 
-
-    return false;
+    return this.compare(root);
   }
 
   generateNav() {}
