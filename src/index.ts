@@ -4,6 +4,9 @@ import {program} from "commander";
 import chalk from "chalk";
 import {generateStructure} from "./helpers/structure";
 import {resolve} from "path";
+import express from 'express';
+
+const app = express();
 
 program
   .name("photon-generator")
@@ -16,7 +19,8 @@ program
   .option("-dn, --disableNav", "disable navigation generation", false)
   .option("-o --outDir <path>", "specify output directory", "docs")
   .option("-w --watch", "watch files in pages for changes -> regenerate on change", false)
-  .option("-pr --pollingRate", "in what time intervals in ms the file watcher should check for changes (only effective with --watch)", "1000");
+  .option("-pr --pollingRate", "in what time intervals in ms the file watcher should check for changes (only effective with --watch)", "1000")
+  .option("-s --serve", "serve built files on localhost", false);
 
 program.parse();
 
@@ -59,6 +63,13 @@ async function run() {
         }
         building = false;
       }, parseInt(options.pollingRate));
+    }
+    if (options.serve) {
+      app.use('/', express.static(resolve(process.cwd(), 'docs')));
+
+      app.listen(3000, () => {
+        console.log(chalk.blue(`Started local server at http://localhost:3000`));
+      });
     }
   } catch (e: any) {
     console.error(chalk.red(`Something went wrong: ${e.message}`));

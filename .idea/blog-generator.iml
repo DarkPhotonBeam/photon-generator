@@ -9,5 +9,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="darkphotonbeam.github.io" />
+    <orderEntry type="library" name="texme" level="application" />
+    <orderEntry type="library" name="atom-one-dark" level="application" />
+    <orderEntry type="library" name="highlight" level="application" />
+    <orderEntry type="library" name="highlight.js" level="application" />
   </component>
 </module>

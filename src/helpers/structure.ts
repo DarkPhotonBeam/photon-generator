@@ -50,14 +50,14 @@ async function addPage(root: PageRoot, parent: Page | null, path: string = "") {
               page.title = meta.title ?? "";
               page.name = meta.name ?? "";
             } catch (e: any) {
-              console.error(
-                `Failed parsing json for file ${resolve(
-                  process.cwd(),
-                  "pages",
-                  path,
-                  dirent.name
-                )} with error: ${e.message}`
-              );
+              // console.error(
+              //   `Failed parsing json for file ${resolve(
+              //     process.cwd(),
+              //     "pages",
+              //     path,
+              //     dirent.name
+              //   )} with error: ${e.message}`
+              // );
             }
           } else if (
             dirent.name.endsWith(".html") ||
@@ -67,7 +67,7 @@ async function addPage(root: PageRoot, parent: Page | null, path: string = "") {
             if (dirent.name.endsWith(".md")) {
               //const converter = new showdown.Converter();
               //page.body = converter.makeHtml(contents);
-              page.body = marked.parse(contents);
+              page.body = marked.parse(contents.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/,""));
             } else {
               page.body = contents;
             }
