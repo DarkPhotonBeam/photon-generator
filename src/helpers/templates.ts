@@ -10,19 +10,18 @@ function textTemplate(title: string, body: string, nav: string = "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 <body>
-    ${nav === '' ? "" : `<aside class="aside"><nav>${nav}</nav></aside>`}
     <main>${body}</main>
     <script>window.texme = { style: 'none' }</script>
      <script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <header class="header">
+    ${nav === '' ? "" : `<aside class="aside"><nav>${nav}</nav></aside><header class="header">
         <div class="hamburger" onclick="toggleHamburger()">
             <div class="bar-1"></div>
             <div class="bar-2"></div>
             <div class="bar-3"></div>
         </div>    
-    </header>
+    </header>`}
     <script>
         const hamburger = document.querySelector(".hamburger");
         function toggleHamburger() {
