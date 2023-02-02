@@ -13,7 +13,7 @@ program
   .description(
     "Tool to generate static websites using .md or .html with recursive folder structure"
   )
-  .version("0.0.6");
+  .version("0.0.7");
 
 program
   .option("-dn, --disableNav", "disable navigation generation", false)

@@ -21,8 +21,7 @@ function textTemplate(title: string, body: string, nav: string = "") {
             <div class="bar-2"></div>
             <div class="bar-3"></div>
         </div>    
-    </header>`}
-    <script>
+    </header><script>
         const hamburger = document.querySelector(".hamburger");
         function toggleHamburger() {
             if (document.querySelector(".hamburger").classList.contains("open")) {
@@ -43,7 +42,8 @@ function textTemplate(title: string, body: string, nav: string = "") {
                 document.querySelector(".header").classList.remove("opaque");
             }
         });
-    </script>
+    </script>`}
+   
 </body>
 </html>`;
 }

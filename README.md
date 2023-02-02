@@ -1,5 +1,5 @@
 # [photon-generator](https://github.com/DarkPhotonBeam/photon-generator)
-###### v0.0.6
+###### v0.0.7
 
 ## Newest Features
 
