@@ -231,28 +231,30 @@ h1 {
   margin-bottom: 2rem;
 }
 
-h1::before {
-  content: "#";
-}
+@media only screen and (min-width: 1800px) {
+  h1::before {
+    content: "#";
+  }
 
-h2::before {
-  content: "##";
-}
+  h2::before {
+    content: "##";
+  }
 
-h3::before {
-  content: "###";
-}
+  h3::before {
+    content: "###";
+  }
 
-h4::before {
-  content: "####";
-}
+  h4::before {
+    content: "####";
+  }
 
-h5::before {
-  content: "#####";
-}
+  h5::before {
+    content: "#####";
+  }
 
-h6::before {
-  content: "######";
+  h6::before {
+    content: "######";
+  }
 }
 
 h1:first-of-type {
@@ -310,7 +312,7 @@ figure {
 }
 
 $scaleX: 1;
-$translate: 1.5rem/2 - .25rem/2;
+$translate: 0.75rem - .125rem;
 $time: 200ms;
 
 .hamburger {
